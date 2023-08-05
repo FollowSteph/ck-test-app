@@ -5,3 +5,7 @@ body .ck-content .table table, body .ck-content .table tr {
 body .ck-content .table table, body .ck-content .table td {
     border: 1px solid #0000ff;
 }
+
+.ck-content .table table td, .ck-content .table table th {
+    border: 1px solid #7cfc00;
+}
