@@ -1,0 +1,7 @@
+body .ck-content .table table, body .ck-content .table tr {
+    border: 1px solid #ff0000;
+}
+
+body .ck-content .table table, body .ck-content .table td {
+    border: 1px solid #0000ff;
+}
