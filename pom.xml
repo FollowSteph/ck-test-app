@@ -10,8 +10,8 @@
     <packaging>jar</packaging>
 
     <properties>
-        <java.version>20</java.version>
-        <vaadin.version>24.1.4</vaadin.version>
+        <java.version>21</java.version>
+        <vaadin.version>24.2.1</vaadin.version>
         <selenium.version>4.10.0</selenium.version>
     </properties>
 
