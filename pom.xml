@@ -83,7 +83,7 @@
         <dependency>
             <groupId>com.wontlost</groupId>
             <artifactId>ckeditor-vaadin</artifactId>
-            <version>4.0.0</version>
+            <version>3.2.1</version>
         </dependency>
     </dependencies>
 
