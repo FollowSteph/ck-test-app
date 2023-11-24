@@ -40,10 +40,10 @@ public class HelloWorldView extends VerticalLayout
 
     private static void programmaticallyAddCssStyles(VaadinCKEditor classicEditor)
     {
-        classicEditor.getElement().executeJs("var style = document.createElement('style');" +
-				"style.type = 'text/css';" +
-				"style.appendChild(document.createTextNode('body .ck-content .table table td, .ck-content .table table th { border: 1px solid #fff; }'));" +
-				"document.head.appendChild(style);");
+//        classicEditor.getElement().executeJs("var style = document.createElement('style');" +
+//				"style.type = 'text/css';" +
+//				"style.appendChild(document.createTextNode('body .ck-content .table table td, .ck-content .table table th { border: 1px solid #fff; }'));" +
+//				"document.head.appendChild(style);");
     }
 
     private static final String TEST_VALUE = """
@@ -68,18 +68,18 @@ public class HelloWorldView extends VerticalLayout
                                 <td>
                                     row
                                 </td>
-                                <td>
+                                <td style="border:1px solid red;">
                                     here
                                 </td>
                             </tr>
                             <tr>
-                                <td style="border-top:1px solid #ccc;">
+                                <td>
                                     last
                                 </td>
-                                <td style="border-top:1px solid #ccc;">
+                                <td>
                                     row
                                 </td>
-                                <td style="border-top:1px solid #ccc;">
+                                <td>
                                     here
                                 </td>
                             </tr>

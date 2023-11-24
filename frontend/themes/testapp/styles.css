@@ -1,7 +1,7 @@
 @import url('./main-layout.css');
 
 body .ck-content .table table {
-    border: 1px solid #ed473a;
+    border: 1px solid #ffffff;
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -14,12 +14,12 @@ body .ck-content .table table {
 }
 
 body .ck-content .table table, body .ck-content .table tr {
-    border: 1px solid #ed473b;
+    border: 1px solid #ffffff;
     page-break-inside: avoid;
 }
 
 body .ck-content .table table, body .ck-content .table td {
-    border: 1px solid #ed473c;
+    border: 1px solid #ffffff;
     vertical-align: top;
     page-break-inside: avoid;
     padding: 2px;
@@ -27,18 +27,18 @@ body .ck-content .table table, body .ck-content .table td {
 }
 
 .ck-content .table table td, .ck-content .table table th {
-    border: 1px solid #ed473d;
+    border: 1px solid #ffffff;
     min-width: 2em;
     padding: .4em;
 }
 
 .ck-content .table table, .ck-content .table tr {
-    border: 1px solid #ed473e;
+    border: 1px solid #ffffff;
     page-break-inside: avoid;
 }
 
 .ck-content .table table, .ck-content .table td {
-    border: 1px solid #ed473f;
+    border: 1px solid #ffffff;
     vertical-align: top;
     page-break-inside: avoid;
     padding: 2px;
