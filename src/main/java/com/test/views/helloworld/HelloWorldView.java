@@ -51,13 +51,13 @@ public class HelloWorldView extends VerticalLayout
                     <table>
                         <tbody>
                             <tr>
-                                <td style="background-color:#ccc;border:1px solid #ccc;">
+                                <td style="background-color:#ccc;">
                                     hello
                                 </td>
-                                <td style="background-color:#ccc;border:1px solid #ccc;">
+                                <td style="background-color:#ccc;">
                                     world
                                 </td>
-                                <td style="background-color:#ccc;border:1px solid #ccc;">
+                                <td style="background-color:#ccc;">
                                     again
                                 </td>
                             </tr>
@@ -68,18 +68,18 @@ public class HelloWorldView extends VerticalLayout
                                 <td>
                                     row
                                 </td>
-                                <td style="border:1px solid red;">
+                                <td>
                                     here
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td style="border-top:1px solid red;">
                                     last
                                 </td>
-                                <td>
+                                <td style="border-top:1px solid red;">
                                     row
                                 </td>
-                                <td>
+                                <td style="border-top:2px solid red;">
                                     here
                                 </td>
                             </tr>
