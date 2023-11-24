@@ -30,10 +30,20 @@ public class HelloWorldView extends VerticalLayout
         resetButton.addClickListener(e -> classicEditor.setValue(TEST_VALUE));
         resetButton.addClickShortcut(Key.ENTER);
 
+        programmaticallyAddCssStyles(classicEditor);
+
         classicEditor.setWidthFull();
         classicEditor.setHeight("250px");
 
         add(classicEditor, resetButton);
+    }
+
+    private static void programmaticallyAddCssStyles(VaadinCKEditor classicEditor)
+    {
+        classicEditor.getElement().executeJs("var style = document.createElement('style');" +
+				"style.type = 'text/css';" +
+				"style.appendChild(document.createTextNode('body .ck-content .table table td, .ck-content .table table th { border: 1px solid #fff; }'));" +
+				"document.head.appendChild(style);");
     }
 
     private static final String TEST_VALUE = """
@@ -41,13 +51,13 @@ public class HelloWorldView extends VerticalLayout
                     <table>
                         <tbody>
                             <tr>
-                                <td>
+                                <td style="border-bottom:1px solid #ccc;">
                                     hello
                                 </td>
-                                <td>
+                                <td style="border-bottom:1px solid #ccc;">
                                     world
                                 </td>
-                                <td>
+                                <td style="border-bottom:1px solid #ccc;">
                                     again
                                 </td>
                             </tr>
@@ -63,13 +73,13 @@ public class HelloWorldView extends VerticalLayout
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td style="border-top:1px solid #ccc;">
                                     last
                                 </td>
-                                <td>
+                                <td style="border-top:1px solid #ccc;">
                                     row
                                 </td>
-                                <td>
+                                <td style="border-top:1px solid #ccc;">
                                     here
                                 </td>
                             </tr>
