@@ -79,10 +79,11 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- decompress the 4.0.0.zip to user.home/.m2/repository/com/wontlost/ckeditor-vaadin -->
         <dependency>
             <groupId>com.wontlost</groupId>
             <artifactId>ckeditor-vaadin</artifactId>
-            <version>3.2.1</version>
+            <version>4.0.0</version>
         </dependency>
     </dependencies>
 
