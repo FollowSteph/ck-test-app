@@ -1,7 +1,6 @@
 package com.test.views.helloworld;
 
 import com.test.views.MainLayout;
-import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -11,6 +10,10 @@ import com.vaadin.flow.router.RouteAlias;
 import com.wontlost.ckeditor.Constants;
 import com.wontlost.ckeditor.VaadinCKEditor;
 import com.wontlost.ckeditor.VaadinCKEditorBuilder;
+import org.apache.commons.io.IOUtils;
+
+import java.io.FileInputStream;
+import java.nio.charset.StandardCharsets;
 
 @PageTitle("Hello World")
 @Route(value = "hello", layout = MainLayout.class)
@@ -20,22 +23,32 @@ public class HelloWorldView extends VerticalLayout
 {
     public HelloWorldView()
     {
+        String testReport = getTestReportFromFile();
+
         VaadinCKEditor classicEditor = new VaadinCKEditorBuilder().with(builder -> {
-            builder.editorData = TEST_VALUE;
+            builder.editorData = testReport;
             builder.editorType = Constants.EditorType.CLASSIC;
             builder.theme = Constants.ThemeType.LIGHT;
         }).createVaadinCKEditor();
 
-        Button resetButton = new Button("Reset");
-        resetButton.addClickListener(e -> classicEditor.setValue(TEST_VALUE));
-        resetButton.addClickShortcut(Key.ENTER);
+        Button resetButton = new Button("Reset", click -> classicEditor.setValue(TEST_VALUE));
+        Button reportButton = new Button("Report", click -> classicEditor.setValue(testReport));
 
         programmaticallyAddCssStyles(classicEditor);
 
         classicEditor.setWidthFull();
-        classicEditor.setHeight("250px");
+        classicEditor.setHeight("800px");
 
-        add(classicEditor, resetButton);
+        add(classicEditor, resetButton, reportButton);
+    }
+
+    private static String getTestReportFromFile() {
+        try {
+            return IOUtils.toString(new FileInputStream("src/main/resources/exampleReport.html"), StandardCharsets.UTF_8);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "error";
+        }
     }
 
     private static void programmaticallyAddCssStyles(VaadinCKEditor classicEditor)
